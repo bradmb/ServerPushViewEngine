@@ -18,5 +18,24 @@ ViewEngines.Engines.Clear();
 ViewEngines.Engines.Add(new PushViewEngine());
 ```
 
-## More Information Coming Soon
-This document is incomplete and will be finished shortly.
+## Enabling On Specific Files
+If you don't want all of your script, image, and style tags to automatically be included in the HTTP/2 preload headers, you can disable automatic inclusion by initializing the PushViewEngine() like so:
+
+```
+ViewEngines.Engines.Clear();
+ViewEngines.Engines.Add(new PushViewEngine(requirePrefix: true));
+```
+
+Then, in your tags that you want included in the HTTP/2 preload, simply append this tag:
+```
+data-http2-push="true"
+```
+
+So, on a script tag, this would look like:
+
+```
+<script src="myscript.js" data-http2-push="true" type="application/javascript"></script>
+```
+
+## NuGet Package Coming Soon
+This will be eventually added into NuGet as a package you can install
