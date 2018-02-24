@@ -1,6 +1,3 @@
-# Server Push View Engine
-#### Adds HTTP/2 push headers to your ASP.NET project
-
 ## Introduction
 I'm a big fan of HTTP/2. We run NGINX in front of our services with HTTP/2 enabled, and
 I've been waiting for them to announce support for server push when using NGINX as a proxy.
