@@ -35,6 +35,3 @@ So, on a script tag, this would look like:
 ```
 <script src="myscript.js" data-http2-push="true" type="application/javascript"></script>
 ```
-
-## NuGet Package Coming Soon
-This will be eventually added into NuGet as a package you can install
